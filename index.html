@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>テストページ</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 16px;
+      line-height: 1.7;
+      color: #222;
+      background: #fafafa;
+    }
+    h1 { color: #2c5282; }
+    button {
+      padding: 8px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>テストページ</h1>
+  <p>これはテスト用の index.html です。</p>
+
+  <p>ボタンのクリック回数: <strong id="count">0</strong></p>
+  <button id="btn" type="button">クリック</button>
+
+  <script>
+    let count = 0;
+    document.getElementById("btn").addEventListener("click", () => {
+      count++;
+      document.getElementById("count").textContent = count;
+    });
+  </script>
+</body>
+</html>
